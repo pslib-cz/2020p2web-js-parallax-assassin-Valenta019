@@ -28,9 +28,34 @@
 </body>
 <script>
     let parallax_items = document.getElementsByClassName("parallax-layer")
+    let offset = "0px"
     window.onscroll = function()
     {
-        parallax_items[1].style.transform = "translateY(-150px) translateX(+80px)"
+        
+        for (let item of parallax_items) {
+            
+            if (item.classList.contains("layer-background")){
+                //item.style.transform = "translateY(-"+document.documentElement.scrollTop+"px)"
+
+            }
+            else if (item.classList.contains("layer-1")){
+                item.style.transform = "translateY(-"+document.documentElement.scrollTop*(0.5)+"px)"
+                
+            }
+            else if (item.classList.contains("layer-2")){
+                item.style.transform = "translateY(-"+document.documentElement.scrollTop*(0.7)+"px)"
+
+            }
+            else if (item.classList.contains("layer-3")){
+                item.style.transform = "translateY(-"+document.documentElement.scrollTop*(0.9)+"px)"
+
+            }
+            else if (item.classList.contains("layer-4")){
+                item.style.transform = "translateY(-"+document.documentElement.scrollTop*(1)+"px)"
+
+            }
+        }
+        //parallax_items[1].style.transform = "translateY(-150px) translateX(+80px)"
     }
 </script>
 </html>
