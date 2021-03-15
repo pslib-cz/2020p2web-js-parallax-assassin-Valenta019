@@ -27,6 +27,10 @@
     </section>
 </body>
 <script>
-
+    let parallax_items = document.getElementsByClassName("parallax-layer")
+    window.onscroll = function()
+    {
+        parallax_items[1].style.transform = "translateY(-150px) translateX(+80px)"
+    }
 </script>
 </html>
